@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import viteLogo from "/vite.svg";
 import reactLogo from "./assets/react.svg";
@@ -31,45 +32,35 @@ function App() {
 }
 
 const Container = styled.div`
-  text-align: center;
+	text-align: center;
 `;
 
 const Logo = styled.img`
-  height: 6rem;
-  pointer-events: none;
-
-  &.react {
-    animation: react-logo-spin infinite 20s linear;
-  }
-
-  @keyframes react-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+	height: 6rem;
+	pointer-events: none;
 `;
 
 const Header = styled.h1`
-  font-size: 4rem;
+	font-size: 2.5rem;
 `;
 
 const Card = styled.div`
-  padding: 2rem;
+	margin: 2rem;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
 const Button = styled.button`
-  font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
+	font-size: 1.5rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	background-color: #f0f0f0;
+	cursor: pointer;
 `;
 
 const ReadTheDocs = styled.p`
-  font-size: 1.25rem;
-  color: #888;
+	font-size: 0.75rem;
 `;
 
 export default App;
