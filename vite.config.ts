@@ -5,7 +5,6 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
 	plugins: [react()],
 	test: {
-    // 👋 add the line below to add jsdom to vite
     environment: 'jsdom',
 		globals: true,
     setupFiles: './src/tests/setup.ts', 
