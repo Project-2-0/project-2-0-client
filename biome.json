@@ -10,8 +10,9 @@
 		"ignore": []
 	},
 	"formatter": {
-		"enabled": true,
-		"indentStyle": "tab"
+		"indentWidth": 2,
+		"lineWidth": 80,
+		"bracketSpacing": true
 	},
 	"organizeImports": {
 		"enabled": true
@@ -24,7 +25,13 @@
 	},
 	"javascript": {
 		"formatter": {
-			"quoteStyle": "double"
+			"quoteStyle": "double",
+			"bracketSpacing": true
+		}
+	},
+	"json": {
+		"formatter": {
+			"trailingCommas": "none"
 		}
 	}
 }
