@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import styled from "styled-components";
-import viteLogo from "/vite.svg";
-import reactLogo from "../assets/react.svg";
 import { API_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 
-function Main() {
+const Main = () => {
 
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -49,12 +47,6 @@ function Main() {
 
 	function notLoggedInState() {
 		return (
-			<Container>
-				<div>
-					<Logo src={viteLogo} alt="vite logo" />
-					<Logo src={reactLogo} alt="react logo" />
-				</div>
-				<Header>Project 2.0</Header>
 				<Card>
 					<p>
 						Welcome to Project 2.0! Please log in.
@@ -75,18 +67,12 @@ function Main() {
 						<button type="submit">Log in</button>
 					</form>
 				</Card>
-			</Container>
 		);
 	}
 
 	function loggedInState() {
 		return (
 			<Container>
-				<div>
-					<Logo src={viteLogo} alt="vite logo" />
-					<Logo src={reactLogo} alt="react logo" />
-				</div>
-				<Header>Project 2.0</Header>
 				<Card>
 					<p>
 						You are logged in!
@@ -100,7 +86,7 @@ function Main() {
 					<ul>
 						{chats.map((chat) => (
 							<li key={chat.id}>
-								<Link to={`/chat?id=${chat.id}`}>{chat.name}</Link>
+								<Link to={`/chat/${chat.id}`}>{chat.name}</Link>
 							</li>
 						))}
 					</ul>
@@ -118,7 +104,7 @@ function Main() {
 			credentials: "include",
 		});
 		if(response.ok) {
-			const data = await response.json();
+			const data = response.json();
 			return data;
 		} else {
 			return [];
